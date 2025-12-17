@@ -28,4 +28,4 @@ modules:
     build-commands:
       - cargo fetch --frozen --manifest-path=codex-rs/Cargo.toml
       - cargo build --frozen --manifest-path=codex-rs/Cargo.toml --release
-      - install -Dm755 target/release/codex -t /app/bin
+      - install -Dm755 codex-rs/target/release/codex -t /app/bin
