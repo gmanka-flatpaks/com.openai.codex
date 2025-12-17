@@ -1,0 +1,31 @@
+app-id: com.openai.codex
+command: codex
+runtime: org.freedesktop.Sdk
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
+  - org.freedesktop.Sdk.Extension.golang
+finish-args:
+  - --share=network
+modules:
+  - modules/host-spawn/host-spawn.yml
+  - name: codex
+    buildsystem: simple
+    build-options:
+      append-path: /usr/lib/sdk/rust-stable/bin
+      env:
+        CARGO_HOME: /run/build/codex/cargo
+    sources:
+      - modules/codex/codex-cargo-sources.yml
+      - type: git
+        url: https://github.com/openai/codex
+        tag: rust-v0.73.0
+        commit: 1d20f6af48e49d4003b0322d7c3a6c7ee9509b04
+      - type: file
+        path: modules/codex/Cargo.lock
+        dest: codex-rs
+    build-commands:
+      - cargo fetch --frozen --manifest-path=codex-rs/Cargo.toml
+      - cargo build --frozen --manifest-path=codex-rs/Cargo.toml --release
+      - install -Dm755 target/release/codex -t /app/bin
