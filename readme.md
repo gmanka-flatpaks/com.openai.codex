@@ -6,6 +6,12 @@
 flatpak run org.flatpak.Builder --user --install --install-deps-from=flathub --force-clean --repo=repo build com.openai.codex.yml
 ```
 
+### run
+
+```shell
+flatpak run com.openai.codex
+```
+
 ### access to host system
 
 by default access to host system is restricted, but you can enable it:
@@ -16,3 +22,8 @@ sudo flatpak override com.openai.codex --talk-name=org.freedesktop.Flatpak
 
 after that, codex will be able to access your host terminal via host-spawn tool, which is already inctluded in this flatpak package
 
+### access to current working directory
+
+```shell
+flatpak run --filesystem=$PWD com.openai.codex
+```
