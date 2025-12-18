@@ -1,0 +1,11 @@
+name: launcher
+sources:
+  - type: script
+    dest-filename: codex-launcher
+    commands:
+      - export CODEX_HOME=$XDG_CONFIG_HOME/codex
+      - mkdir -p $CODEX_HOME
+      - exec /app/bin/codex "$@"
+buildsystem: simple
+build-commands:
+  - install -D -m755 codex-launcher /app/bin/codex-launcher

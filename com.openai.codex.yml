@@ -1,5 +1,5 @@
 app-id: com.openai.codex
-command: codex
+command: codex-launcher
 runtime: org.freedesktop.Sdk
 runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
@@ -10,6 +10,7 @@ finish-args:
   - --share=network
 modules:
   - modules/host-spawn/host-spawn.yml
+  - modules/codex/launcher.yml
   - name: codex
     buildsystem: simple
     build-options:
