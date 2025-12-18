@@ -11,6 +11,9 @@ sources:
   - type: git
     url: https://github.com/1player/host-spawn
     tag: v1.6.2
+    commit: d76c3a5196a8e0943f6a1c7c9f1acde4bd83c40c
+    x-checker-data:
+      type: git
   - go.mod.yml
 build-commands:
   - go install -mod=vendor

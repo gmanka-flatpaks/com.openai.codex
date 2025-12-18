@@ -22,6 +22,9 @@ modules:
         url: https://github.com/openai/codex
         tag: rust-v0.73.0
         commit: 1d20f6af48e49d4003b0322d7c3a6c7ee9509b04
+        x-checker-data:
+          type: git
+          tag-pattern: ^rust-v([0-9.]+)$
       - type: file
         path: modules/codex/Cargo.lock
         dest: codex-rs
