@@ -9,6 +9,7 @@ sdk-extensions:
 finish-args:
   - --share=network
 modules:
+  - modules/ripgrep/ripgrep.yml
   - modules/host-spawn/host-spawn.yml
   - modules/codex/launcher.yml
   - name: codex
