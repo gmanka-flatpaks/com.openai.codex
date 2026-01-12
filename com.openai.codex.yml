@@ -31,5 +31,5 @@ modules:
         path: modules/codex/Cargo.lock
         dest: codex-rs
     build-commands:
-      - cargo build --frozen --manifest-path=codex-rs/Cargo.toml --release
+      - cargo build --frozen --manifest-path=codex-rs/cli/Cargo.toml --release
       - install -Dm755 codex-rs/target/release/codex -t /app/bin
