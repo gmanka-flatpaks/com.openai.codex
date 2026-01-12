@@ -22,8 +22,8 @@ modules:
       - modules/codex/codex-cargo-sources.yml
       - type: git
         url: https://github.com/openai/codex
-        tag: rust-v0.77.0
-        commit: 112f40e91c12af0f7146d7e03f20283516a8af0b
+        tag: rust-v0.80.0
+        commit: f0679a6ab2563135e01cc922698cb54921a1719f
         x-checker-data:
           type: git
           tag-pattern: ^rust-v([0-9.]+)$
