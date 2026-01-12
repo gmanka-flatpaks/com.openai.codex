@@ -1,9 +1,10 @@
 # codex flatpak
 
-### building
+### install
 
 ```shell
-flatpak run org.flatpak.Builder --user --install --install-deps-from=flathub --force-clean --repo=repo build com.openai.codex.yml
+sudo flatpak remote-add gmanka oci+https://gmanka-flatpaks.github.io
+flatpak install gmanka com.openai.codex
 ```
 
 ### run
@@ -26,4 +27,10 @@ after that, codex will be able to access your host terminal via host-spawn tool,
 
 ```shell
 flatpak run --filesystem=$PWD com.openai.codex
+```
+
+### building from source
+
+```shell
+flatpak run org.flatpak.Builder --user --install --install-deps-from=flathub --force-clean --repo=repo build com.openai.codex.yml
 ```
