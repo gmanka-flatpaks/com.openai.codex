@@ -20,13 +20,14 @@ modules:
         CARGO_HOME: /run/build/codex/cargo
     sources:
       - modules/codex/codex-cargo-sources.yml
-      - type: git
-        url: https://github.com/openai/codex
-        tag: rust-v0.80.0
-        commit: f0679a6ab2563135e01cc922698cb54921a1719f
+      - type: archive
+        url: https://github.com/openai/codex/archive/refs/tags/rust-v0.86.0.tar.gz
+        sha256: affd839ee51462bf833500319a5d6dfeb30c76e862be1e6fb6fe170fcfc49cf4
         x-checker-data:
-          type: git
-          tag-pattern: ^rust-v([0-9.]+)$
+          project-id: 387692
+          type: anitya
+          is-main-source: true
+          url-template: https://github.com/openai/codex/archive/refs/tags/rust-v$version.tar.gz
       - type: file
         path: modules/codex/Cargo.lock
         dest: codex-rs
