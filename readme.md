@@ -29,6 +29,19 @@ after that, codex will be able to access your host terminal via host-spawn tool,
 flatpak run --filesystem=$PWD com.openai.codex
 ```
 
+### access to host's /tmp
+
+by default host's `/tmp` is not shared to the container
+
+codex is usually writes something to host's `/tmp` dir and expects it to appear in flatpak sandbox
+
+if you want shared `/tmp`, run this
+
+```shell
+sudo flatpak override com.openai.codex --filesystem=/var/tmp
+sudo flatpak override com.openai.codex --filesystem=/tmp
+```
+
 ### building codex flatpak from source
 
 ```shell
