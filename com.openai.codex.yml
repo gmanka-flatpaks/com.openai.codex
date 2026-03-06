@@ -21,8 +21,8 @@ modules:
     sources:
       - modules/codex/codex-cargo-sources.yml
       - type: archive
-        url: https://github.com/openai/codex/archive/refs/tags/rust-v0.107.0.tar.gz
-        sha256: ec5cbdf633c0bd7373e8d65c03590ff9086e0199fc600caa56cbf3adbcea3728
+        url: https://github.com/openai/codex/archive/refs/tags/rust-v0.111.0.tar.gz
+        sha256: 1d3dc976232b6b8c25898bf4bb3d51a8b0a8e556807f9076e86dc99253d17f2c
         x-checker-data:
           project-id: 387692
           type: anitya
