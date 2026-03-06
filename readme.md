@@ -42,6 +42,28 @@ sudo flatpak override com.openai.codex --filesystem=/var/tmp
 sudo flatpak override com.openai.codex --filesystem=/tmp
 ```
 
+### how to use ctrl+g editor bind
+
+nano is preisntalled on the freedesktop sdk, so you can use nano even without host-spawn
+
+```shell
+sudo flatpak override --env=EDITOR=nano com.openai.codex
+```
+
+to use any edotors other then nano make sure you allowed codex to [spawn commands on host](#allow-spawn-commands-on-host)
+
+use vi on host
+
+```shell
+sudo flatpak override --env=EDITOR='host-spawn vi' com.openai.codex
+```
+
+or use flatpaked neovim on host
+
+```shell
+sudo flatpak override --env=EDITOR='host-spawn flatpak run io.neovim.nvim' com.openai.codex
+```
+
 ### building codex flatpak from source
 
 ```shell
