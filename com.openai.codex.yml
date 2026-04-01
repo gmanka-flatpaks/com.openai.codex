@@ -3,11 +3,9 @@ command: codex-launcher
 runtime: org.freedesktop.Sdk
 runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
-add-build-extensions:
-  org.freedesktop.Sdk.Extension.rust-stable:
-    remove-after-build: true
-  org.freedesktop.Sdk.Extension.golang:
-    remove-after-build: true
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
+  - org.freedesktop.Sdk.Extension.golang
 finish-args:
   - --share=network
   - --env=TERM=xterm-256color
