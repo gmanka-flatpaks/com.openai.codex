@@ -19,11 +19,16 @@ modules:
       append-path: /usr/lib/sdk/rust-stable/bin
       env:
         CARGO_HOME: /run/build/codex/cargo
+        RUSTY_V8_ARCHIVE: /run/build/codex/librusty_v8_release_x86_64-unknown-linux-gnu.a.gz
     sources:
       - modules/codex/codex-cargo-sources.yml
+      - type: file
+        url: https://github.com/denoland/rusty_v8/releases/download/v146.4.0/librusty_v8_release_x86_64-unknown-linux-gnu.a.gz
+        sha256: e64b4d99e4ae293a2e846244a89b80178ba10382c13fb591c1fa6968f5291153
+        dest-filename: librusty_v8_release_x86_64-unknown-linux-gnu.a.gz
       - type: archive
-        url: https://github.com/openai/codex/archive/refs/tags/rust-v0.117.0.tar.gz
-        sha256: fa84af2e3dd24769c555329fb2d4eb7e48402f6b7ac4dbcb7db7acc5e27dd48a
+        url: https://github.com/openai/codex/archive/refs/tags/rust-v0.118.0.tar.gz
+        sha256: 7be18a18f604ad877b47c08d9db00018bd1dbbbd774dc6e1e7ea52dc492d7138
         x-checker-data:
           project-id: 387692
           type: anitya
