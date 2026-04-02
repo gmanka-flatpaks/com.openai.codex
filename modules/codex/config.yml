@@ -1,0 +1,7 @@
+name: config
+sources:
+  - type: file
+    path: default-config.toml
+buildsystem: simple
+build-commands:
+  - install -D -m755 default-config.toml /app/share/default-config.yml

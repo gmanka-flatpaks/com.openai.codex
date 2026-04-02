@@ -5,6 +5,7 @@ sources:
     commands:
       - export CODEX_HOME=$XDG_CONFIG_HOME/codex
       - mkdir -p $CODEX_HOME
+      - '[ -f $CODEX_HOME/config.toml ] || cp /app/share/default-config.toml $CODEX_HOME/config.toml'
       - exec /app/bin/codex "$@"
 buildsystem: simple
 build-commands:

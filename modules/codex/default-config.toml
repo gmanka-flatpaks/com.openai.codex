@@ -1,0 +1,2 @@
+[features]
+use_legacy_landlock = true

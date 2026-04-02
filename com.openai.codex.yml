@@ -12,6 +12,7 @@ finish-args:
 modules:
   - modules/ripgrep/ripgrep.yml
   - modules/host-spawn/host-spawn.yml
+  - modules/codex/config.yml
   - modules/codex/launcher.yml
   - name: codex
     buildsystem: simple
