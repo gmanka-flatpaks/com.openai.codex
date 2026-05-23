@@ -36,8 +36,8 @@ modules:
         sha256: dbf165b07c81bdb054bc046b43d23e69fcf7bcc1a4c1b5b4776983a71062ecd8
         dest-filename: librusty.gz
       - type: archive
-        url: https://github.com/openai/codex/archive/refs/tags/rust-v0.121.0.tar.gz
-        sha256: 566c16867997de616729c2acb9f8b62ef1655c38e1e30f3ba18a0fc26785d372
+        url: https://github.com/openai/codex/archive/refs/tags/rust-v0.133.0.tar.gz
+        sha256: 6c9c58b65dc10cf5ddc7013961796d32e53243a9a3f4249a9cb2e833d0eed69f
         x-checker-data:
           project-id: 387692
           type: anitya
